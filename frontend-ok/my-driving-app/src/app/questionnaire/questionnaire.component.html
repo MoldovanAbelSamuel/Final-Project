@@ -1,0 +1,40 @@
+<div class="centered-layout">
+  <div class="question">
+    <h2>{{ question }}</h2>
+  </div>
+
+  <div class="answer-options">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="selectAnswer('A')"
+      class="button-with-margin"
+      [ngClass]="{'selected': selectedAnswers.includes('A')}"
+    >
+      {{ answerA }}
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="selectAnswer('B')"
+      class="button-with-margin"
+      [ngClass]="{'selected': selectedAnswers.includes('B')}"
+    >
+      {{ answerB }}
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="selectAnswer('C')"
+      class="button-with-margin"
+      [ngClass]="{'selected': selectedAnswers.includes('C')}"
+    >
+      {{ answerC }}
+    </button>
+  </div>
+
+  <div class="bottom-buttons" fxLayout="row" fxLayoutAlign="center center">
+    <button mat-raised-button color="primary" (click)="nextQuestion()" class="button-with-margin">Next</button>
+    <button mat-raised-button color="warn" (click)="skipQuestion()">Skip</button>
+  </div>
+</div>

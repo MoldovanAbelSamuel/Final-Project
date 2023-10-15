@@ -1,0 +1,15 @@
+<div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+  <h2>Login</h2>
+  <form class="login-form">
+    <mat-form-field fxLayout="column" fxLayoutAlign="center center">
+      <input matInput placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }">
+    </mat-form-field>
+    <mat-form-field fxLayout="column" fxLayoutAlign="center center">
+      <input matInput type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }">
+    </mat-form-field>
+    <div class="button-container" fxLayout="row" fxLayoutAlign="center center">
+      <button mat-raised-button color="primary" (click)="login()">Login</button>
+      <button mat-raised-button color="accent" (click)="register()">Register</button>
+    </div>
+  </form>
+</div>
