@@ -17,6 +17,10 @@ public class Questionnaire {
     @OneToMany(mappedBy = "questionnaire", cascade = CascadeType.ALL)
     private List<Question> questions;
 
+    public Questionnaire(String title) {
+        this.title = title;
+    }
+
     public Questionnaire(int questionnaireId, String title, List<Question> questions) {
         this.questionnaireId = questionnaireId;
         this.title = title;

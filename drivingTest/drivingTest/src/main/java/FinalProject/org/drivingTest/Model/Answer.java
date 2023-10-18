@@ -1,5 +1,6 @@
 package FinalProject.org.drivingTest.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -14,7 +15,12 @@ public class Answer {
     private String text;
 
     @OneToMany(mappedBy = "answer", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<QuestionAnswer> questionAnswers;
+
+    public Answer(String text) {
+        this.text = text;
+    }
 
     public Answer(int answerId, String text, List<QuestionAnswer> questionAnswers) {
         this.answerId = answerId;

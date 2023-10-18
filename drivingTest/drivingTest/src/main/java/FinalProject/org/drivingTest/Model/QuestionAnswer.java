@@ -1,5 +1,6 @@
 package FinalProject.org.drivingTest.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,6 +12,7 @@ public class QuestionAnswer {
     private int questionAnswerId;
 
     @ManyToOne
+    @JsonIgnore
     private Question question;
 
     @ManyToOne

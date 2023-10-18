@@ -7,27 +7,27 @@
     <button
       mat-raised-button
       color="primary"
-      (click)="selectAnswer('A')"
+      (click)="selectAnswer(0)"
       class="button-with-margin"
-      [ngClass]="{'selected': selectedAnswers.includes('A')}"
+      [ngClass]="{'selected': selectedAnswers.includes(0)}"
     >
       {{ answerA }}
     </button>
     <button
       mat-raised-button
       color="primary"
-      (click)="selectAnswer('B')"
+      (click)="selectAnswer(1)"
       class="button-with-margin"
-      [ngClass]="{'selected': selectedAnswers.includes('B')}"
+      [ngClass]="{'selected': selectedAnswers.includes(1)}"
     >
       {{ answerB }}
     </button>
     <button
       mat-raised-button
       color="primary"
-      (click)="selectAnswer('C')"
+      (click)="selectAnswer(2)"
       class="button-with-margin"
-      [ngClass]="{'selected': selectedAnswers.includes('C')}"
+      [ngClass]="{'selected': selectedAnswers.includes(2)}"
     >
       {{ answerC }}
     </button>

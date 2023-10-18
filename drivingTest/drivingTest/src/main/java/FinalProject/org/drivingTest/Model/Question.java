@@ -1,5 +1,6 @@
 package FinalProject.org.drivingTest.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -17,7 +18,12 @@ public class Question {
     private List<QuestionAnswer> questionAnswers;
 
     @ManyToOne
+    @JsonIgnore
     private Questionnaire questionnaire;
+
+    public Question(String questionText) {
+        this.questionText = questionText;
+    }
 
     public Question(int questionId, String questionText, List<QuestionAnswer> questionAnswers, Questionnaire questionnaire) {
         this.questionId = questionId;
