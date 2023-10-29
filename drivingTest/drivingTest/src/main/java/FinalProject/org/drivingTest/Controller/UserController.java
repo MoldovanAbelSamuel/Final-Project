@@ -2,6 +2,7 @@ package FinalProject.org.drivingTest.Controller;
 
 import FinalProject.org.drivingTest.Model.Questionnaire;
 import FinalProject.org.drivingTest.Model.User;
+import FinalProject.org.drivingTest.Model.UserDTO;
 import FinalProject.org.drivingTest.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +32,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<User> login(@RequestBody User user){
+    public ResponseEntity<User> login(@RequestBody UserDTO user){
         User addedUser = userService.checkUser(user);
         if(addedUser == null){
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();

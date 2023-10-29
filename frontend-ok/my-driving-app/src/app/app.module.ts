@@ -16,12 +16,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {HttpClientModule} from "@angular/common/http";
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { AuthentificationComponent } from './authentification/authentification.component';
+import { FinalResultComponent } from './final-result/final-result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionnaireComponent,
-    AuthentificationComponent
+    AuthentificationComponent,
+    FinalResultComponent
   ],
   imports: [
     BrowserModule,

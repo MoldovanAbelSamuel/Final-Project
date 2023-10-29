@@ -19,4 +19,18 @@ export class AuthentificationService {
   loginUser(user: User): Observable<any> {
     return  this.http.post(this.baseUrl + 'login', user) as Observable<any>;
   }
+
+
+
+  isLoggedIn(): boolean {
+
+    const storedUser = localStorage.getItem('username');
+    const storedPassword = localStorage.getItem('password');
+
+    if (storedUser !== null && storedPassword !== null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
