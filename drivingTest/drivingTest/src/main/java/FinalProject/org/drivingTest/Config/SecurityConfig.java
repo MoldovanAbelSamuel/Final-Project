@@ -15,8 +15,6 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
 
-    //private final CustomUserDetailsServiceImpl customUserDetailsService;
-
     @Autowired
     public SecurityConfig() {
 
@@ -35,7 +33,7 @@ public class SecurityConfig {
                                 .requestMatchers("/**").permitAll()
                                 .anyRequest().authenticated()
                 )
-                .csrf().disable(); // Disable CSRF (not recommended for production) TODO
+                .csrf().disable();
 
         return http.build();
     }

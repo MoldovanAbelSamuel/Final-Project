@@ -20,6 +20,8 @@ public class DrivingTestApplication {
 		SpringApplication.run(DrivingTestApplication.class, args);
 	}
 
+
+	//!! First time when you run the app, don't forget to change #Update in #Create in app.prop, then change again in update
 	/*@Bean
 	CommandLineRunner atStartup (AnswerRepository answerRepository, QuestionRepository questionRepository,
 								 QuestionnaireRepository questionnaireRepository, QuestionAnswerRepository questionAnswerRepository,
@@ -554,21 +556,6 @@ public class DrivingTestApplication {
 
 
 			questionAnswerRepository.saveAllAndFlush(QA1);
-
-
-//			answerRepository.save(a1a);
-//			answerRepository.save(a1b);
-//			answerRepository.save(a1c);
-//			questionAnswerRepository.save(qa1a);
-//			questionAnswerRepository.save(qa1b);
-//			questionAnswerRepository.save(qa1c);
-//
-//			answerRepository.save(a2a);
-//			answerRepository.save(a2b);
-//			answerRepository.save(a2c);
-//			questionAnswerRepository.save(qa2a); //asta ne salveaza in repo si question si question_answer
-//			questionAnswerRepository.save(qa2b);
-//			questionAnswerRepository.
 
 		};
 	}*/

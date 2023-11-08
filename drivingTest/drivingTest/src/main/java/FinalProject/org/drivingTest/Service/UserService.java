@@ -36,7 +36,6 @@ public class UserService {
         if(this.matchesPassword(user.getPassword(), user1.getPassword())){
             return user1;
         }
-        //bad password
         return null;
     }
 
