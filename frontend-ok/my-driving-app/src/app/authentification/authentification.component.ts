@@ -26,7 +26,6 @@ export class AuthentificationComponent {
     }
     this.authentificationService.loginUser(user).subscribe(
       (response) => {
-        console.log('Login response:', response);
         if(response !== null){
           localStorage.setItem('username', response.username);
           localStorage.setItem('password', response.password);
@@ -41,7 +40,6 @@ export class AuthentificationComponent {
       }
     );
 
-    console.log('Logging in with username:', this.username);
   }
 
   register() {
@@ -55,12 +53,11 @@ export class AuthentificationComponent {
     }
     this.authentificationService.registerUser(user).subscribe(
       (response) => {
-        console.log('Login response:', response);
+        alert("Username and password were successfully registered. Please login.")
       },
       (error) => {
         console.error('Login error:', error);
       }
     );
-    console.log('Registering with username:', this.username);
   }
 }

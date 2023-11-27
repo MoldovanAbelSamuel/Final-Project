@@ -77,7 +77,6 @@ export class QuestionnaireComponent implements OnInit{
       (response) => {
         this.questions = response.questions;
         this.getQuestion();
-
       },
       (error) => {
         console.error('Login error:', error);
@@ -95,7 +94,4 @@ export class QuestionnaireComponent implements OnInit{
       }
     }
   }
-
-
-
 }
